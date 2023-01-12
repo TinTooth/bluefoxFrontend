@@ -38,7 +38,7 @@ const OrderConfirmation = ({order,items, close}) => {
             {/* <div className="title">Order Confrimation</div> */}
             <div className="order-details-container">
                 <div>
-                    <div className="title lob2"> {user.first_name}'s Order</div>
+                    <div className="title lob2"> {order.customer_name}'s Order</div>
                     
                 </div>
                 <ItemList items = {items} noRemove = {true}/>

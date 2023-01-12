@@ -13,7 +13,6 @@ import useAuth from "../../../hooks/useAuth";
 
 
 const OrderForm = ({setItems, items}) => {
-    const [user] = useAuth();
     const [products,setProducts] = useState([]);
     const [currentOrder,setcurrentOrder] = useState([]);
     const [options,setOptions] = useState([]);
@@ -24,9 +23,9 @@ const OrderForm = ({setItems, items}) => {
     const [warningModal, setwarningModal] = useState(false);
     const [warningMessage, setwarningMessage] = useState("");
     let order = {
-        customer_name:'',
-        customer_phone_number:'',
-        customer_email:'',
+        customer_name:' ',
+        customer_phone_number:' ',
+        customer_email:' ',
         deliver_date: "",
         status: "Items Not Confirmed",
         total_work_time: 0,
@@ -45,11 +44,13 @@ const OrderForm = ({setItems, items}) => {
     }
 
     async function postItem(item) {
-        const response = await axios.post(`http://127.0.0.1:8000/api/order/${currentOrder.id}/items/manage/`,item,config)
+        const response = await axios.post(`http://127.0.0.1:8000/api/order/${currentOrder.id}/items/manage/`,item)
     }
     
     async function postOrder() {
-        const response = await axios.post("http://127.0.0.1:8000/api/order/",formData,config)
+        console.log(formData)
+        const response = await axios.post("http://127.0.0.1:8000/api/order/",formData)
+        console.log(response.data)
         setcurrentOrder(response.data)
     }
 
@@ -59,7 +60,7 @@ const OrderForm = ({setItems, items}) => {
         updatedOrder.total_price = getTotalPrice();
         updatedOrder.total_work_time = getWorkTime(items);
         updatedOrder.adjusted_price = 0;
-        const response = await axios.put(`http://127.0.0.1:8000/api/order/${updatedOrder.id}/`,updatedOrder,config)
+        const response = await axios.put(`http://127.0.0.1:8000/api/order/put/${updatedOrder.id}/`,updatedOrder)
         setcurrentOrder(response.data)
     }
 

@@ -95,9 +95,7 @@ const useDate = () => {
     for (let i = 0; i <=daysAhead; i++) {
         let date = new Date(`${input}T00:00:00`)
         date.setDate(date.getDate() + i)
-        console.log(date)
         let itemsinDay = acceptedOrders.filter(item => item.order.deliver_date == date.toJSON().slice(0,10))
-        console.log(itemsinDay)
         itemsInRange = [...itemsInRange,...itemsinDay]
     }
     for (let i = 1; i <= daysBehind; i++) {

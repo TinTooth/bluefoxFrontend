@@ -1,0 +1,16 @@
+.image-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    /* margin-bottom: 4%; */
+}
+
+.image-container {
+    width:20%;
+}
+
+.image-container img {
+    width: 100%;
+    object-fit: cover;
+}

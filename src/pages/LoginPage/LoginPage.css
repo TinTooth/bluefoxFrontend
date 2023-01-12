@@ -1,0 +1,35 @@
+.error {
+  color: red;
+}
+
+
+
+
+.lr {
+  border: 4px solid #818181;
+  margin-top: 15%;
+  padding: 5%;
+  background-color: #3C4F6D;
+  
+}
+
+.lr label {
+  color: aliceblue;
+  font-size: larger;
+}
+
+.lr a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.lr a:visited {
+  color: aliceblue;
+}
+
+.lr button {
+  background-color: #354157 ;
+  padding: 5%;
+}
+
+.m {margin-top: 5%;}

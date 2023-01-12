@@ -1,0 +1,74 @@
+.large-warning {
+    font-size: 1vw;
+    color: #C37F90
+}
+
+.small-warning {
+    font-size: .8vw;
+}
+
+.pric {
+    font-size: 1.4vw;
+    padding-left: 4%;
+}
+
+.descrip {
+    margin-top: 2%;
+    padding-bottom: 1%;
+    margin-bottom: 2%;
+    border-bottom: 2px solid #C37F90;
+}
+
+.form {
+    display: flex;
+    
+}
+
+.input-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding-left: 5%;
+}
+
+.input-row textarea {
+    max-width: 22vw;
+    min-width: 22vw;
+}
+
+.input-row label {
+    font-family: "Poppins", sans-serif;
+    font-size : 1vw;
+    width :26%;
+}
+
+.instructions {
+    font-size: .75vw;
+}
+
+.final-row {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.input-row select {
+    width: 45%;
+    text-align: right;
+    padding-right: 1%;
+    font-size: large;
+}
+
+.input-row select:focus {
+    outline:none
+}
+
+.input-row option {
+   font-size: large;
+}
+
+.input-row option:hover {
+    background-color: #3C4F6D
+}

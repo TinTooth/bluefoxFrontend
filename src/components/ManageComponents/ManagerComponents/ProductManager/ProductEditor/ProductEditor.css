@@ -1,0 +1,33 @@
+.product-editor {
+    width: 75%;
+    background-color: #3C4F6D;
+    padding: 4%;
+
+}
+
+/* .product-editor label {
+    color: aliceblue;
+    padding-bottom: 1%;
+    font-size: .75vw;
+}
+
+.product-editor input {
+    padding: .75%;
+    font-size: .75vw;
+}
+
+.product-editor textarea {
+    padding: 1%;
+    width: 100%;
+    resize: none;
+    height: 10vh;
+} */
+
+.product-editor button {
+    background-color: #2b3547;
+    color: aliceblue;
+}
+.product-editor button:hover {
+    background-color:steelblue;
+    color: aliceblue;
+}

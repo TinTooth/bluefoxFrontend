@@ -1,0 +1,45 @@
+.calendar {
+    /* margin: auto; */
+    width: 45vw;
+    height: 65vh;
+    margin-bottom: 1%;
+    /* border: 3px solid gray; */
+    padding: 2%;
+    background-color: #354157;
+    color: aliceblue;
+    margin-top: 5vh;
+}
+
+.fc-day{
+    background: #3C4F6D!important;
+    /* border: none !important; */
+    color: aliceblue;
+    border: 1px solid #2b3547!important;
+  
+} 
+
+.fc-event{
+    cursor: pointer!important;
+}
+
+.fc-event:hover {
+    background-color: steelblue!important;
+}
+.fc-day-today {
+    background: #C37F90!important;
+    /* border: none !important; */
+  
+} 
+
+
+
+.fc-button {
+    background-color: #C37F90!important;
+    color: black!important;
+    border: none!important;
+}
+
+.fc-button:focus {
+    box-shadow: none!important;
+    background-color: #AC4059!important;
+}

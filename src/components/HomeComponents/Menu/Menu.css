@@ -1,0 +1,33 @@
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.column{
+    padding: 2%;
+    width: 20vw;
+}
+
+.option-list{
+    padding: 2%;
+}
+
+.item-row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+.button-row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-row button {
+    background-color: steelblue ;
+    color: aliceblue;
+
+    font-size: .75vw;
+    
+}

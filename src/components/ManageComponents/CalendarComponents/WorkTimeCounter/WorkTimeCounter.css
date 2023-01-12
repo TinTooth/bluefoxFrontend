@@ -1,0 +1,22 @@
+.worktime-container{
+ width:15%;
+ color: aliceblue;
+ min-height: 30vh;
+}
+
+.week {
+    font-size: x-large;
+    border-bottom: 3px solid #C37F90;
+    margin-bottom: 4%;
+    text-align: center;
+}
+
+.selected-date {
+    padding: 2%;
+    font-size: larger;
+}
+
+.p2 {
+    padding-left: 5%;
+    font-size: large;
+}

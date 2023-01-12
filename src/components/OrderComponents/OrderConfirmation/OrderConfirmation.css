@@ -1,0 +1,55 @@
+.confirmation-container {
+    width: 55vw;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title {
+    color: aliceblue;
+    text-align: center;
+    font-size: 2.5vw;
+}
+
+.order-details-container {
+    width: 38%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.order-detail2 {
+    width: 100%;
+    color: aliceblue;
+    font-size: 1.1vw;
+}
+
+.order-divider {
+    height: 2px;
+    border-bottom: solid 2px  #C37F90;
+    margin-bottom: 5%;
+    margin-top: 3%;
+}
+
+.mb {
+    margin-bottom: 7%;
+}
+
+
+.mt {
+    margin-top: 7%;
+
+}
+
+.order-message {
+    color: #C2C5CA;
+    font-size: larger;
+    padding-left: 2%;
+}
+.likelihood {
+    
+    
+    padding-left: 2%;
+    color: aliceblue;
+}

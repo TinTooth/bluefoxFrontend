@@ -1,0 +1,21 @@
+.login-message {
+    text-align: center;
+    background-color: #3C4F6D;
+    border: none;
+}
+
+.item-list-container {
+    width: 20%;
+}
+
+.b {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 90vh;
+    background-image: url("../../Images/HomeBackground.jpg");
+    background: fill;
+}
+
+.spacer {
+    height: 10%;
+}

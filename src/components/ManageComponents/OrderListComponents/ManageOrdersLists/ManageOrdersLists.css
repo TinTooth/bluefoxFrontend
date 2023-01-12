@@ -1,0 +1,120 @@
+.order-lists {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+
+.lists-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 22vw;
+    /* background-color: rgb(108, 104, 104); */
+}
+
+.head {
+    background-color: #354157 ;
+    color: aliceblue;
+    font-size: larger;
+    border-bottom: 1px solid #C37F90;
+}
+
+.pad {
+    padding: .5vw;
+
+}
+
+.pink {
+    color:#C37F90
+}
+
+.click {
+    width: 100;
+}
+
+
+.t-row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 1vh;
+   
+}
+
+.n-cell {
+    width: 10%;
+    cursor: pointer;
+   padding: 2%;
+   border-bottom:1px solid #C37F90;
+}
+.nr-cell {
+    width: 10%;
+    cursor: pointer;
+   
+}
+
+.list-title {
+    color: aliceblue;
+    text-align: center;
+    /* padding: 2%; */
+    margin-top: 5%;
+    font-size: larger;
+}
+
+.n-cell:hover {
+    background-color: steelblue;
+    /* border-radius: 10px; */
+    /* padding: 2%; */
+}
+
+.c-cell {
+    width: 30%;
+}
+
+.d-cell {
+    width: 20%
+}
+
+.b-cell {
+    width: 40%;
+}
+
+
+
+.table {
+    width: 100%;
+    font-size: .65vw;
+}
+
+.table-name{
+    width: 33%;
+    text-align: center;
+}
+
+.data {
+    height: 15vh;
+    background-color: #3C4F6D;
+    overflow-y: scroll;
+    color: aliceblue;
+}
+
+.no-data {
+    height: 15vh;
+    background-color: #3C4F6D;
+    /* border: 2px solid black; */
+    padding-top: 15%;
+}
+
+.data button {
+    padding: .4vh;
+    font-size: .65vw;
+    text-align: center;
+    background-color: #354157;
+    margin-left: 4%;
+}
+
+.data button:hover {
+    background-color: steelblue;
+}

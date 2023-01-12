@@ -1,0 +1,33 @@
+.product-manager-list-container {
+    width:25%;
+    height: 45.5vh;
+}
+
+.table-2 {
+    width: 100%;
+    font-size: .75vw;
+    height: 100%
+}
+
+.table-2 button {
+    padding: 25%;
+    font-size: larger;
+    /* margin-right: 20%; */
+}
+
+.bp-cell {
+    width: 10%;
+}
+
+.p-cell {
+    width: 40%;
+}
+
+.dp-cell {
+    width: 45%
+}
+
+.nheight {
+    height: 100%;
+    overflow-y: scroll;
+}

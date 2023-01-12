@@ -1,0 +1,17 @@
+input {
+    width: 30%;
+    text-align: end;
+    padding-right: 1%;
+    margin-bottom: 1%;
+    font-size: smaller;
+}
+
+label {
+    font-size: smaller;
+}
+
+textarea {
+    font-weight: 100;
+    font-size: large;
+}
+

@@ -28,7 +28,7 @@ const OrderConfirmation = ({order,items, close}) => {
     }
 
     async function getItems() {
-        let response = await axios.get('http://127.0.0.1:8000/api/order/1/items/all',config)
+        let response = await axios.get('http://127.0.0.1:8000/api/order/1/items/all')
         setAllItems(response.data)
     }
 

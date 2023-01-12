@@ -24,7 +24,9 @@ const OrderForm = ({setItems, items}) => {
     const [warningModal, setwarningModal] = useState(false);
     const [warningMessage, setwarningMessage] = useState("");
     let order = {
-        user:1,
+        customer_name:'',
+        customer_phone_number:'',
+        customer_email:'',
         deliver_date: "",
         status: "Items Not Confirmed",
         total_work_time: 0,
@@ -57,7 +59,6 @@ const OrderForm = ({setItems, items}) => {
         updatedOrder.total_price = getTotalPrice();
         updatedOrder.total_work_time = getWorkTime(items);
         updatedOrder.adjusted_price = 0;
-        updatedOrder.user = currentOrder.user.id
         const response = await axios.put(`http://127.0.0.1:8000/api/order/${updatedOrder.id}/`,updatedOrder,config)
         setcurrentOrder(response.data)
     }
@@ -80,11 +81,9 @@ const OrderForm = ({setItems, items}) => {
     }
 
     const createOrder= () => {
-        if (!user) {
-            setwarningMessage("Please Login to Place an Order")
-            setwarningModal(true);
-        }
-        else if (formData.deliver_date === order.deliver_date ){
+       
+        
+        if (formData.deliver_date === order.deliver_date ){
             setwarningMessage("Please Choose A Deliver Date")
             setwarningModal(true);
         }
@@ -155,6 +154,9 @@ const OrderForm = ({setItems, items}) => {
                 </div>
                 <div className="column-form1">
                         <div className="date">
+                            <Input title ="Name:" name ="customer_name" value = {formData.customer_name} onChange = {handleInputChange}/>
+                            <Input title ="Email:" name ="customer_email" value = {formData.customer_email} onChange = {handleInputChange}/>
+                            <Input title ="Phone #:" name ="customer_phone_number" value = {formData.customer_phone_number} onChange = {handleInputChange}/>
                             <Input type = "date" title = "Deliver Date:" name= "deliver_date" value = {formData.deliver_date} onChange={handleInputChange}/>
                         </div>
                         <button onClick ={handleSubmit}>Submit Order Request</button> 

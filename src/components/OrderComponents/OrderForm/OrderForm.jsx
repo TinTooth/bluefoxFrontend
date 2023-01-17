@@ -104,7 +104,7 @@ const OrderForm = ({setItems, items}) => {
             
         }
         
-        if (message -! " "){
+        if (message == ""){
             postOrder();
             setitemConfirmModal(true);
         }
@@ -166,29 +166,28 @@ const OrderForm = ({setItems, items}) => {
                 <div className="notes">Write general notes about the order here or anything else you would like to tell her. Who is this for? What kind of Event? </div>
                 </div>
                 <div className="column-form2">
-                        <div className="input2">
-                            <Input title ="Name:" name ="customer_name" value = {formData.customer_name} onChange = {handleInputChange}/>
-                        </div>
-                        <div className="input2">
-                            <Input title ="Email:" name ="customer_email" value = {formData.customer_email} onChange = {handleInputChange}/>
-                        </div>
-                        <div className="input2">
-                            <Input title ="Phone #:" name ="customer_phone_number" value = {formData.customer_phone_number} onChange = {handleInputChange}/>
-                        </div>
-                        <div className="date input2">
-                            <Input type = "date" title = "OrderDate:" name= "deliver_date" value = {formData.deliver_date} onChange={handleInputChange}/>
-                        </div>
-                        <button onClick ={handleSubmit}>Submit Order Request</button> 
-                    
+                    <div className="input2">
+                        <Input title ="Name:" name ="customer_name" value = {formData.customer_name} onChange = {handleInputChange}/>
+                    </div>
+                    <div className="input2">
+                        <Input title ="Email:" name ="customer_email" value = {formData.customer_email} onChange = {handleInputChange}/>
+                    </div>
+                    <div className="input2">
+                        <Input title ="Phone #:" name ="customer_phone_number" value = {formData.customer_phone_number} onChange = {handleInputChange}/>
+                    </div>
+                    <div className="date input2">
+                        <Input type = "date" title = "OrderDate:" name= "deliver_date" value = {formData.deliver_date} onChange={handleInputChange}/>
+                    </div>
+                    <button onClick ={handleSubmit}>Submit Order Request</button>   
                 </div>
             </div>
             <Modal title = "" modal = {itemConfirmModal} onClose = {handleModal}>
                 <div className="item-confirm">
                     <div className="message">Please Confirm Items Below</div>
                     <ItemList items = {items} setItems = {setItems}></ItemList>
-                    <div className="button-row">
-                        <button onClick = {handleModal}>CANCEL</button>
-                        <button onClick = {createItems}>Confirm Order</button> 
+                    <div className="button-row ">
+                        <button className = "modal-button" onClick = {handleModal}>CANCEL</button>
+                        <button className = "modal-button" onClick = {createItems}>Confirm Order</button> 
                     </div>
                 </div>
             </Modal>

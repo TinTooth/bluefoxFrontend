@@ -1,10 +1,10 @@
 .large-warning {
-    font-size: 1vw;
+    font-size: 1.2vw;
     color: #C37F90
 }
 
 .small-warning {
-    font-size: .8vw;
+    font-size: 1vw;
 }
 
 .pric {
@@ -20,21 +20,20 @@
 }
 
 .form {
-    display: flex;
     
 }
 
 .input-row {
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    /* flex-wrap: nowrap;
+    flex-direction: row; */
     padding-left: 5%;
 }
 
 .input-row textarea {
-    max-width: 22vw;
-    min-width: 22vw;
+    max-width: 27vw;
+    min-width: 27vw;
 }
 
 .input-row label {
@@ -44,7 +43,7 @@
 }
 
 .instructions {
-    font-size: .75vw;
+    font-size: 1vw;
 }
 
 .final-row {
@@ -57,7 +56,7 @@
 .input-row select {
     width: 45%;
     text-align: right;
-    padding-right: 1%;
+    padding-right: 2%;
     font-size: large;
 }
 
@@ -71,4 +70,12 @@
 
 .input-row option:hover {
     background-color: #3C4F6D
+}
+
+.input-row label {
+    font-size: large;
+}
+
+.form button {
+    font-size: 1.2vw;
 }

@@ -115,10 +115,10 @@ const ProductForm = ({product,addItem,closeModal,products}) => {
                  onChange = {handleInputChange} textArea = {true}/>
             </div>
             <div className="instructions">Add Theme and Design Details (Colors, Theme...) As Well as Any Special Instructions for Lisa</div>
-                    <div className="final-row">
-                        <div className={warning}> Please Be Sure To Fill Out Entire Form</div>
-                        <button type="submit">ADD to Order</button>
-                    </div>
+                <div className="final-row">
+                    <div className={warning}> Please Be Sure To Fill Out Entire Form</div>
+                    <button type="submit">ADD to Order</button>
+                </div>
             </form>
         </div> 
      ) : options.length && product.type === "Cupcakes"  && product.name != "Specialty Cupcakes"?(
@@ -202,7 +202,7 @@ const ProductForm = ({product,addItem,closeModal,products}) => {
             <form className = 'form' onSubmit={handleSubmit}>
             <div className="input-row">
                 <Input title = "Quantity: " name ="quantity" value = {formData.quantity}
-                    onChange = {handleInputChange} />
+                    onChange = {handleInputChange}/>
             </div>
             <div className="input-row">
                 <Input title = "Details: " name ="design_details"value = {formData.design_details}

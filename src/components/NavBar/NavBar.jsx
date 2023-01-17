@@ -15,6 +15,9 @@ const Navbar = () => {
             <b>Blue Fox Bakery</b>
           </Link>
         </li>
+        <li>
+        <button onClick={()=> window.location.href = 'https://www.instagram.com/blue_fox_bakery/?hl=en'}>Instagram</button>
+        </li>
         {/* <li>
           {user && user.is_staff ? (
             <button onClick={()=> navigate('/manage')}>Manage Orders</button>

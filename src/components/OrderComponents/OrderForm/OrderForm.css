@@ -25,9 +25,9 @@
 
 .form-container input {
     font-size: 2vh;
-    margin-left: 5%;
+    /* margin-left: 2%; */
     width: 33%;
-    margin: auto;
+    /* margin: auto; */
 }
 .form-container textarea {
     width:100%;
@@ -116,19 +116,23 @@
     width: 90%;
     margin: auto;
     color: aliceblue;
-    font-size: .75w;
+    font-size: 1vw;
 }
 
 .message {
     color:aliceblue;
     width: 20vw;
     text-align: center;
-    font-size: 1vw;
-    margin-bottom: 5%; 
+    font-size: 1.4vw;
+    margin-bottom: 10%; 
 }
 
 .message-row {
     text-align: end;
+}
+
+.message-row button {
+    font-size:  1.2vw;
 }
 
 .login-message {
@@ -143,4 +147,8 @@
 
 .login-message:hover {
     color:#C37F90;
+}
+
+.button-row button {
+    font-size: 1vw;
 }

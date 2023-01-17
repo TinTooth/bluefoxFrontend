@@ -1,7 +1,7 @@
 import "./input.css"
 
 const Input = ({type = "text",name,value,onChange,title, textArea = false, 
-                                select = false, options}) => {
+                                select = false, options, number = false}) => {
         
    
 
@@ -18,7 +18,25 @@ const Input = ({type = "text",name,value,onChange,title, textArea = false,
 
          />
          </>
-     ): select ? (
+
+    ): number ? (
+        <>
+        <label>
+            {title}
+        </label>
+        <input
+        type= "number"
+        name = {name}
+        value = {value}
+        onChange = {onChange} 
+        min = "1"
+        max = "24"
+        />
+        </>
+        
+        
+    
+    ): select ? (
             <>
          <label>
             {title}

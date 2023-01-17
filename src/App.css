@@ -55,7 +55,7 @@ button {
   background-color: #3C4F6D;
   border: none;
   color: aliceblue;
-  font-size: 1rem;
+  font-size: 1vw;
   font-family: inherit;
   padding: 0.5rem 0.5rem;
 }
@@ -65,6 +65,8 @@ button:hover {
   color: white;
   background-color: steelblue;
 }
+
+
 
 .form-container button {
   background-color: #3C4F6D;

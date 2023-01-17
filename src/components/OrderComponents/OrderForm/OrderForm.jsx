@@ -83,22 +83,34 @@ const OrderForm = ({setItems, items}) => {
 
     const createOrder= () => {
        
-        
+       let message = '' ;
         if (formData.deliver_date === order.deliver_date ){
-            setwarningMessage("Please Choose A Deliver Date")
-            setwarningModal(true);
+            message += 'Enter an Order Date'
         }
         else if (formData.notes === order.notes) {
-            setwarningMessage("Please Enter Notes for Lisa")
-            setwarningModal(true);
+            message += 'Enter a Note for Lisa'
+        }
+        else if (formData.customer_email === order.customer_email) {
+            message += 'Enter your Email'
+        }
+        else if (formData.customer_phone_number === order.customer_phone_number) {
+            message += 'Enter your Phone Number'
+        }
+        else if (formData.customer_name === order.customer_name) {
+            message += 'Enter your Name'
         }
         else if ( items.length < 1) {
-            setwarningMessage("Please Add at Least 1 Item to the Order")
-            setwarningModal(true);
+            message += 'Add at least 1 itemn to your Order'
+            
         }
-        else {
+        
+        if (message -! " "){
             postOrder();
             setitemConfirmModal(true);
+        }
+        else {
+            setwarningMessage(message)
+            setwarningModal(true);
         }
     }
 

@@ -15,7 +15,7 @@ const Navbar = () => {
             <b>Blue Fox Bakery</b>
           </Link>
         </li>
-        <li>
+        {/* <li>
           {user && user.is_staff ? (
             <button onClick={()=> navigate('/manage')}>Manage Orders</button>
           ) : (
@@ -26,7 +26,7 @@ const Navbar = () => {
           ) : (
             <button onClick={() => navigate("/login")}>Login</button>
           )}
-        </li>
+        </li> */}
       </ul>
     </div>
   );

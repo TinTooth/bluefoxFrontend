@@ -1,6 +1,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
+import useCheckWidth from "../../hooks/useCheckWidth.js";
 // Components
 import LandingSection from "../../components/HomeComponents/LandingSection/LandingSection.jsx";
 import ImageBar from "../../components/HomeComponents/ImageBar/ImageBar.jsx";
@@ -23,7 +24,7 @@ import goodie2 from "../../Images/goodie2.jpeg";
 import goodie3 from "../../Images/goodie3.jpeg";
 
 const HomePage = () => {
-  
+  const screenSize = useCheckWidth()
   const [products,setProducts] = useState([]);
   // const [options,SetOptions] = useState([]);
   const [cakeProducts,setCakeProducts] = useState([]);
@@ -39,6 +40,7 @@ const HomePage = () => {
   const cakeRef = useRef();
   const cupcakeRef = useRef();
   const goodiesRef = useRef();
+
 
   useEffect(() => {
     getProducts()
@@ -65,17 +67,19 @@ const HomePage = () => {
   }
 
 
-  return (
+  return screenSize.width/screenSize.height >= 1.25 && screenSize.width/screenSize.height <= 1.95  ?(
     <>
       <LandingSection cookieRef={cookieRef} cakeRef = {cakeRef} cupcakeRef = {cupcakeRef} goodiesRef = {goodiesRef}/>
       <ImageBar/>
+      <div>{screenSize.width}/{screenSize.height}</div>
       <ProductSection thisref = {cakeRef} productData = {cakeProducts} images = {cakeImages} />
       <ProductSection thisref = {cupcakeRef} productData = {cupcakeProducts} images = {cupcakeImages} />
       <ProductSection thisref = {cookieRef} productData = {cookieProducts} images = {cookieImages} />
       <ProductSection thisref = {goodiesRef} productData = {goodieProducts} images = {goodieImages} />
       <Footer/>
     </>
-    );
+    ) : 
+    <div>{screenSize.width}/{screenSize.height}</div>;
 };
 
 export default HomePage;

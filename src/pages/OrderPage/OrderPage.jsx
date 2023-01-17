@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useCheckWidth from "../../hooks/useCheckWidth.js";
 import NavBar from "../../components/NavBar/NavBar.jsx"
 import { useNavigate, Link } from "react-router-dom";
 import ItemList from "../../components/OrderComponents/ItemsList/ItemList.jsx";
@@ -8,12 +9,12 @@ import "./OrderPage.css"
 
 
 const OrderPage = () => {
-
+    const screenSize = useCheckWidth()
     const [items, setitems] = useState([]);
     const navigate = useNavigate();
 
 
-    return (
+    return screenSize.width/screenSize.height >= 1.2 && screenSize.width/screenSize.height <= 1.95  ?(
         <>
         <NavBar></NavBar>
         <div className="b">
@@ -25,7 +26,8 @@ const OrderPage = () => {
         </div>
         </>  
         
-    )
+    ) :
+    <div>{screenSize.width}/{screenSize.height}</div>;
 
 }
  

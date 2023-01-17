@@ -153,12 +153,18 @@ const OrderForm = ({setItems, items}) => {
                     <Input title = "Order Notes:" name ="notes" value = {formData.notes} onChange ={handleInputChange} textArea = {true} />
                 <div className="notes">Write general notes about the order here or anything else you would like to tell her. Who is this for? What kind of Event? </div>
                 </div>
-                <div className="column-form1">
-                        <div className="date">
+                <div className="column-form2">
+                        <div className="input2">
                             <Input title ="Name:" name ="customer_name" value = {formData.customer_name} onChange = {handleInputChange}/>
+                        </div>
+                        <div className="input2">
                             <Input title ="Email:" name ="customer_email" value = {formData.customer_email} onChange = {handleInputChange}/>
+                        </div>
+                        <div className="input2">
                             <Input title ="Phone #:" name ="customer_phone_number" value = {formData.customer_phone_number} onChange = {handleInputChange}/>
-                            <Input type = "date" title = "Deliver Date:" name= "deliver_date" value = {formData.deliver_date} onChange={handleInputChange}/>
+                        </div>
+                        <div className="date input2">
+                            <Input type = "date" title = "OrderDate:" name= "deliver_date" value = {formData.deliver_date} onChange={handleInputChange}/>
                         </div>
                         <button onClick ={handleSubmit}>Submit Order Request</button> 
                     

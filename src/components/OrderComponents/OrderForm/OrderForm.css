@@ -50,12 +50,33 @@
     /* justify-content: end; */
     /* align-items: center; */
 }
+
+
 .column-form2 {
-    width: 50%;
+    width: 35%;
     height: 30%;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
+    flex-direction: column;
+}
+
+.column-form2 input {
+    width: 50%;
+}
+
+.input2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.column-form2 input {
+
+}
+
+.input-row2 {
+    display: flex;
+    justify-content: space-around;
 }
 
 .column-row {
@@ -63,7 +84,8 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 5%
+    gap: 5%;
+    justify-content: space-around;
 }
 
 .products-row {

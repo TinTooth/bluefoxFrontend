@@ -18,9 +18,9 @@ li {
 
 .navBar button {
   background: #2b3547;
- 
+  font-size: 1.5vw;
   color: white;
-  padding: 0.4rem 0.5rem;
+  padding: 0.5rem 0.5rem;
 }
 
 .navBar button:hover {

@@ -25,7 +25,7 @@ const Input = ({type = "text",name,value,onChange,title, textArea = false,
             {title}
         </label>
         <input
-        type= "number"
+        type = "number"
         name = {name}
         value = {value}
         onChange = {onChange} 
@@ -33,9 +33,6 @@ const Input = ({type = "text",name,value,onChange,title, textArea = false,
         max = "24"
         />
         </>
-        
-        
-    
     ): select ? (
             <>
          <label>

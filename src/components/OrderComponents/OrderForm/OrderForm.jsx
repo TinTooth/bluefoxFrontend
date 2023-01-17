@@ -24,7 +24,7 @@ const OrderForm = ({setItems, items}) => {
     const [warningMessage, setwarningMessage] = useState("");
     let order = {
         customer_name:' ',
-        customer_phone_number:' ',
+        customer_phone_number:'xxx - xxx - xxxxx ',
         customer_email:' ',
         deliver_date: "",
         status: "Items Not Confirmed",

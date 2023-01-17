@@ -67,13 +67,13 @@ const HomePage = () => {
 
   return (
     <>
-    <LandingSection cookieRef={cookieRef} cakeRef = {cakeRef} cupcakeRef = {cupcakeRef} goodiesRef = {goodiesRef}/>
-    <ImageBar/>
-    <ProductSection thisref = {cakeRef} productData = {cakeProducts} images = {cakeImages} />
-    <ProductSection thisref = {cupcakeRef} productData = {cupcakeProducts} images = {cupcakeImages} />
-    <ProductSection thisref = {cookieRef} productData = {cookieProducts} images = {cookieImages} />
-    <ProductSection thisref = {goodiesRef} productData = {goodieProducts} images = {goodieImages} />
-    <Footer/>
+      <LandingSection cookieRef={cookieRef} cakeRef = {cakeRef} cupcakeRef = {cupcakeRef} goodiesRef = {goodiesRef}/>
+      <ImageBar/>
+      <ProductSection thisref = {cakeRef} productData = {cakeProducts} images = {cakeImages} />
+      <ProductSection thisref = {cupcakeRef} productData = {cupcakeProducts} images = {cupcakeImages} />
+      <ProductSection thisref = {cookieRef} productData = {cookieProducts} images = {cookieImages} />
+      <ProductSection thisref = {goodiesRef} productData = {goodieProducts} images = {goodieImages} />
+      <Footer/>
     </>
     );
 };

@@ -68,12 +68,12 @@ const HomePage = () => {
   }
 
 
-  return screenSize.width/screenSize.height >= 1.25 && screenSize.width/screenSize.height <= 1.95 ? (
+  return screenSize.width >= 1000 ?(
     <>
       <BrowserView>
         <LandingSection cookieRef={cookieRef} cakeRef = {cakeRef} cupcakeRef = {cupcakeRef} goodiesRef = {goodiesRef}/>
         <ImageBar/>
-        <div>{screenSize.width}/{screenSize.height}</div>
+        {/* <div>{screenSize.width}/{screenSize.height}</div> */}
         <ProductSection thisref = {cakeRef} productData = {cakeProducts} images = {cakeImages} />
         <ProductSection thisref = {cupcakeRef} productData = {cupcakeProducts} images = {cupcakeImages} />
         <ProductSection thisref = {cookieRef} productData = {cookieProducts} images = {cookieImages} />

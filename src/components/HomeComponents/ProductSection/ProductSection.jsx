@@ -27,7 +27,7 @@ const ProductSection = ({thisref, productData ,images}) => {
                 <div className="section-name lob2"> 
                     <div className="ptitle">{productData[0].type}</div> 
                     <div className="buttons-container">
-                        <button onClick={handleOrderClick}>Order</button>
+                        <button className = 'section-button'onClick={handleOrderClick}>Order</button>
                         {productData[0].type === "Cakes" || productData[0].type === "Cupcakes" ? (
                             <button onClick = {handleModal}>Menu</button>):null}
                         <button onClick={()=> window.location.href = 'https://www.instagram.com/blue_fox_bakery/?hl=en'}>Instagram</button>

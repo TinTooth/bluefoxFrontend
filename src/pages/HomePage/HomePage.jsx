@@ -8,6 +8,7 @@ import LandingSection from "../../components/HomeComponents/LandingSection/Landi
 import ImageBar from "../../components/HomeComponents/ImageBar/ImageBar.jsx";
 import ProductSection from "../../components/HomeComponents/ProductSection/ProductSection.jsx";
 import Footer from "../../components/Footer/Footer.jsx"
+import SideBar from "../../components/HomeComponents/SideBar/SideBar.jsx";
 
 // IMAGES
 
@@ -70,22 +71,23 @@ const HomePage = () => {
 
   return screenSize.width >= 1000 ?(
     <>
-      <BrowserView>
         <LandingSection cookieRef={cookieRef} cakeRef = {cakeRef} cupcakeRef = {cupcakeRef} goodiesRef = {goodiesRef}/>
         <ImageBar/>
-        {/* <div>{screenSize.width}/{screenSize.height}</div> */}
-        <ProductSection thisref = {cakeRef} productData = {cakeProducts} images = {cakeImages} />
+        <ProductSection thisref = {cakeRef} productData = {cakeProducts} images = {cakeImages}/>
         <ProductSection thisref = {cupcakeRef} productData = {cupcakeProducts} images = {cupcakeImages} />
         <ProductSection thisref = {cookieRef} productData = {cookieProducts} images = {cookieImages} />
         <ProductSection thisref = {goodiesRef} productData = {goodieProducts} images = {goodieImages} />
         <Footer/>
-      </BrowserView>
-      <MobileView>
-       <div>{screenSize.width}/{screenSize.height}</div>;
-      </MobileView>
     </>
     ) : 
-    <div>{screenSize.width}/{screenSize.height}</div>;
+    <>
+    <ImageBar/>
+    <SideBar/>
+    <ProductSection thisref = {cakeRef} productData = {cakeProducts} images = {cakeImages} mobile = {true}/>
+    <ProductSection thisref = {cupcakeRef} productData = {cupcakeProducts} images = {cupcakeImages}  mobile = {true}/>
+    <ProductSection thisref = {cookieRef} productData = {cookieProducts} images = {cookieImages} mobile = {true} />
+    <ProductSection thisref = {goodiesRef} productData = {goodieProducts} images = {goodieImages}  mobile = {true}/>
+    </>
 };
 
 export default HomePage;

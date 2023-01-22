@@ -1,0 +1,9 @@
+.sidebar {
+    width: 15vw;
+    height: 50vh;
+    left:0;
+    position: fixed;
+    background-color: aqua;
+    margin-right: 4vw;
+    margin-top: 20%;
+}

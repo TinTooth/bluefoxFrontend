@@ -5,7 +5,7 @@ import "./ProductSection.css"
 import Modal from "../../Util/Modal/Modal";
 import Menu from "../../HomeComponents/Menu/Menu"
 
-const ProductSection = ({thisref, productData ,images}) => {
+const ProductSection = ({thisref, productData ,images, mobile = false}) => {
     const navigate = useNavigate()
     const [modal,setModal] = useState(false);
 
@@ -17,7 +17,7 @@ const ProductSection = ({thisref, productData ,images}) => {
         modal ? (setModal(false)):setModal(true);
     }
 
-    return productData.length ?(
+    return productData.length && mobile == false ?(
         
         <div className="product-section-container" ref = {thisref}>
             <Modal title={`${productData[0].type} Menu`} modal = {modal} onClose ={handleModal} >
@@ -47,7 +47,26 @@ const ProductSection = ({thisref, productData ,images}) => {
 
         </div>
         
-      ): null;
+      ) : productData.length && mobile == true ? (
+      <div className="product-section-container-mobile" ref = {thisref}>
+            <div className="m-section-mobile">
+                <div className="section-name lob2"> 
+                    <div className="ptitle">{productData[0].type}</div> 
+                </div>
+                <div className="products-container-mobile">
+
+                {productData.map((p,i) => {
+                    return (
+                        <div className = "product-mobile" key= {i}>
+                        <Product product = {p} image = {images[i]}/>
+                    </div>
+                    )
+                })}
+                </div>
+            </div>
+
+        </div> ): null;
+        
 }
  
 export default ProductSection;

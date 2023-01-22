@@ -2,9 +2,11 @@ import React from "react";
 import { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
+import useCheckWidth from "../../hooks/useCheckWidth";
 import "./NavBar.css";
 
 const Navbar = () => {
+  const screenSize = useCheckWidth()
   const { logoutUser, user } = useContext(AuthContext);
   const navigate = useNavigate();
   return (
@@ -16,20 +18,11 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-        <button  className = "lob2" onClick={()=> window.location.href = 'https://www.instagram.com/blue_fox_bakery/?hl=en'}>Instagram</button>
+        {screenSize.width >= 1000 ? ( 
+          <button  className = "lob2" onClick={()=> window.location.href = 'https://www.instagram.com/blue_fox_bakery/?hl=en'}>Instagram</button>
+        ):null}
+        
         </li>
-        {/* <li>
-          {user && user.is_staff ? (
-            <button onClick={()=> navigate('/manage')}>Manage Orders</button>
-          ) : (
-            null
-          )}
-          {user ? (
-            <button onClick={logoutUser}>Logout</button>
-          ) : (
-            <button onClick={() => navigate("/login")}>Login</button>
-          )}
-        </li> */}
       </ul>
     </div>
   );

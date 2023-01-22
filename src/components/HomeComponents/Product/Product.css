@@ -48,6 +48,11 @@
     font-size: larger;
     min-height: 175px;
 }
+.description-mobile{
+    padding: 4%;
+    font-size: larger;
+    min-height: 100px;
+}
 
 .price {
     font-size: 1.5vh;

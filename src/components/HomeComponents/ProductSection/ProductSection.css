@@ -9,7 +9,7 @@
     background-color: #354157; 
     color: #C2C5CA;
     display: flex;
-    flex-wrap: nowrap;   
+    flex-wrap: nowrap;
 }
 
 .s-section {
@@ -48,6 +48,7 @@
     width: 100%;
     height: 100%;
     background-color: #2b3547;
+    margin-left: 15vw;
 }
 
 .product {
@@ -55,7 +56,7 @@
     height: 100%;
 }
 .product-mobile {
-    width: 60%;
+    width: 80%;
     height: 100%;
     margin-bottom: 5vh;
 
@@ -95,6 +96,7 @@
 .ptitle {
     padding-left: 5%;
 }
+
 
 .buttons-container button:hover {
     background-color: steelblue;

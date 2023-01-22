@@ -9,6 +9,7 @@ import ImageBar from "../../components/HomeComponents/ImageBar/ImageBar.jsx";
 import ProductSection from "../../components/HomeComponents/ProductSection/ProductSection.jsx";
 import Footer from "../../components/Footer/Footer.jsx"
 import SideBar from "../../components/HomeComponents/SideBar/SideBar.jsx";
+import NavBar from "../../components/NavBar/NavBar.jsx";
 
 // IMAGES
 
@@ -81,6 +82,7 @@ const HomePage = () => {
     </>
     ) : 
     <>
+    <NavBar/>
     <ImageBar/>
     <SideBar/>
     <ProductSection thisref = {cakeRef} productData = {cakeProducts} images = {cakeImages} mobile = {true}/>

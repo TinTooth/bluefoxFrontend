@@ -14,6 +14,8 @@ li {
   color: white;
   padding: 1.5rem 2rem;
   height: 10vh;
+  position: fixed;
+  width: 100vw;
 }
 
 .navBar button {
@@ -21,6 +23,7 @@ li {
   font-size: 1.5vw;
   color: white;
   padding: 0.5rem 0.5rem;
+  
 }
 
 .navBar button:hover {

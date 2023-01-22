@@ -7,3 +7,10 @@
     margin-right: 4vw;
     margin-top: 20%;
 }
+
+.sidebar-button {
+    width: 100%;
+    height: 20%;
+    font-size: large;
+    text-overflow: wrap;
+}

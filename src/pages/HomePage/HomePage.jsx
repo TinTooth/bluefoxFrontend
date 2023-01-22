@@ -2,6 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import useCheckWidth from "../../hooks/useCheckWidth.js";
+import { MobileView, BrowserView } from "react-device-detect";
 // Components
 import LandingSection from "../../components/HomeComponents/LandingSection/LandingSection.jsx";
 import ImageBar from "../../components/HomeComponents/ImageBar/ImageBar.jsx";
@@ -67,16 +68,21 @@ const HomePage = () => {
   }
 
 
-  return screenSize.width/screenSize.height >= 1.25 && screenSize.width/screenSize.height <= 1.95  ?(
+  return screenSize.width/screenSize.height >= 1.25 && screenSize.width/screenSize.height <= 1.95 ? (
     <>
-      <LandingSection cookieRef={cookieRef} cakeRef = {cakeRef} cupcakeRef = {cupcakeRef} goodiesRef = {goodiesRef}/>
-      <ImageBar/>
-      <div>{screenSize.width}/{screenSize.height}</div>
-      <ProductSection thisref = {cakeRef} productData = {cakeProducts} images = {cakeImages} />
-      <ProductSection thisref = {cupcakeRef} productData = {cupcakeProducts} images = {cupcakeImages} />
-      <ProductSection thisref = {cookieRef} productData = {cookieProducts} images = {cookieImages} />
-      <ProductSection thisref = {goodiesRef} productData = {goodieProducts} images = {goodieImages} />
-      <Footer/>
+      <BrowserView>
+        <LandingSection cookieRef={cookieRef} cakeRef = {cakeRef} cupcakeRef = {cupcakeRef} goodiesRef = {goodiesRef}/>
+        <ImageBar/>
+        <div>{screenSize.width}/{screenSize.height}</div>
+        <ProductSection thisref = {cakeRef} productData = {cakeProducts} images = {cakeImages} />
+        <ProductSection thisref = {cupcakeRef} productData = {cupcakeProducts} images = {cupcakeImages} />
+        <ProductSection thisref = {cookieRef} productData = {cookieProducts} images = {cookieImages} />
+        <ProductSection thisref = {goodiesRef} productData = {goodieProducts} images = {goodieImages} />
+        <Footer/>
+      </BrowserView>
+      <MobileView>
+       <div>{screenSize.width}/{screenSize.height}</div>;
+      </MobileView>
     </>
     ) : 
     <div>{screenSize.width}/{screenSize.height}</div>;

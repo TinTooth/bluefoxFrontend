@@ -1,4 +1,5 @@
 .product-section-container {
+    background-color: #354157;
     height: 95vh;  
     color: #C2C5CA;
     display: flex;
@@ -21,7 +22,10 @@
 }
 
 .m-section {
-    width: 100%;
+    margin:auto;
+    width: 66%;
+    height: 100%;
+    background-color: #2b3547;
 }
 
 .product {

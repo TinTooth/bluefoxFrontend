@@ -23,7 +23,6 @@ const ProductSection = ({thisref, productData ,images}) => {
             <Modal title={`${productData[0].type} Menu`} modal = {modal} onClose ={handleModal} >
                 <Menu type = {productData[0].type} close = {handleModal}/>
                 </Modal>
-            <div className="s-section"></div>
             <div className="m-section">
                 <div className="section-name lob2"> 
                     <div className="ptitle">{productData[0].type}</div> 
@@ -45,7 +44,7 @@ const ProductSection = ({thisref, productData ,images}) => {
                 })}
                 </div>
             </div>
-            <div className="s-section"></div>
+
         </div>
         
       ): null;

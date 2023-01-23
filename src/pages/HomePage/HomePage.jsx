@@ -83,7 +83,6 @@ const HomePage = () => {
     ) : 
     <>
     <NavBar/>
-    <ImageBar/>
     <SideBar/>
     <ProductSection thisref = {cakeRef} productData = {cakeProducts} images = {cakeImages} mobile = {true}/>
     <ProductSection thisref = {cupcakeRef} productData = {cupcakeProducts} images = {cupcakeImages}  mobile = {true}/>

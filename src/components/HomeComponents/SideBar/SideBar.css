@@ -3,7 +3,7 @@
     height: 50vh;
     left:0;
     position: fixed;
-    background-color: aqua;
+    
     margin-right: 4vw;
     /* margin-top: 20%; */
 }
@@ -13,7 +13,7 @@
     width: 100%;
     font-size: large;
     text-overflow: wrap;
-    background-color: none;
+    background-color: #2b3547;
 }
 
 .sidebar-button img {

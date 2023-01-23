@@ -17,6 +17,14 @@ li {
   position: fixed;
   width: 100vw;
 }
+.navBar-mobile {
+  background: #3C4F6D;
+  color: white;
+  padding: 1.5rem 2rem;
+  height: 10vh;
+  position: fixed;
+  width: 100vw;
+}
 
 .navBar button {
   background: #2b3547;
@@ -36,4 +44,8 @@ li {
   cursor: pointer;
   font-size: 4.5vh;
 
+}
+
+.hidden {
+  height: 10vh;
 }

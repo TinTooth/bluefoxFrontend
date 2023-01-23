@@ -18,6 +18,13 @@
     font-weight: bold;
     /* border: 3px solid #818181; */
 }
+.modal-mobile {
+    background-color: #354157;
+    width:100vw;
+    height: 100vh;
+    font-weight: bold;
+    /* border: 3px solid #818181; */
+}
 
 .modal-header{
     /* text-shadow: 2px 0px 5px  rgb(101, 101, 101); */

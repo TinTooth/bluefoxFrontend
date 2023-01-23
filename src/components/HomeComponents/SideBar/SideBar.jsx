@@ -30,7 +30,7 @@ const SideBar = () => {
 
     return (
      <>
-        <Modal title={menu + ' Menu'} modal = {modal} onClose ={handleModal} >
+        <Modal title={menu + ' Menu'} modal = {modal} onClose ={handleModal} mobile = {true} >
                 <Menu type = {menu} close = {handleModal} mobile = {true}/>
         </Modal>
         <div className="sidebar">

@@ -70,6 +70,15 @@ const Menu = ({type, close, mobile = false}) => {
             <button onClick={close}>Close</button>
             </div>
     </div>
+    ): type === 'sizes' && options.length ? (
+        <>
+        <div className="flavors">
+                <OptionsList type = {"Cake Size"} options = {options}/>
+        </div>
+        <div className="button-row">
+            <button onClick={close}>Close</button>
+        </div>
+        </>
     ): null
 } 
  

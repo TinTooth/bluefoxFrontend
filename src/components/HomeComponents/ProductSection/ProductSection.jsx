@@ -6,7 +6,7 @@ import Modal from "../../Util/Modal/Modal";
 import Menu from "../../HomeComponents/Menu/Menu"
 
 const ProductSection = ({thisref, productData ,images, mobile = false}) => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const [modal,setModal] = useState(false);
 
     const handleOrderClick = () => {

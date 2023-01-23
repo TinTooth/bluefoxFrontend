@@ -5,12 +5,20 @@
     position: fixed;
     background-color: aqua;
     margin-right: 4vw;
-    margin-top: 20%;
+    /* margin-top: 20%; */
 }
 
 .sidebar-button {
+    aspect-ratio: 1/1;
     width: 100%;
-    height: 20%;
     font-size: large;
     text-overflow: wrap;
+    background-color: none;
 }
+
+.sidebar-button img {
+    
+    width: 100%;
+    object-fit: cover;
+}
+

@@ -31,7 +31,7 @@ const SideBar = () => {
     return (
      <>
         <Modal title={menu + ' Menu'} modal = {modal} onClose ={handleModal} >
-                <Menu type = {menu} close = {handleModal}/>
+                <Menu type = {menu} close = {handleModal} mobile = {true}/>
         </Modal>
         <div className="sidebar">
             <button className = 'sidebar-button' onClick={handleOrderClick}>
@@ -41,7 +41,7 @@ const SideBar = () => {
                 <img src= {cake} id = 'Cakes' onClick = {handleCakeMenu}/>
             </button>
             <button className = 'sidebar-button'>
-                <img src= {cupcake} id = 'CupCakes' onClick = {handleCakeMenu} />
+                <img src= {cupcake} id = 'Cupcakes' onClick = {handleCakeMenu} />
             </button>
             <button className = 'sidebar-button' 
             onClick={()=> window.location.href = 'https://www.instagram.com/blue_fox_bakery/?hl=en'}>

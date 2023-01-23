@@ -26,7 +26,7 @@ const Navbar = () => {
     </div>
   ) :
   <>
-  <div className="navBar">
+  <div className="navBar-mobile">
   <ul>
     <li className="brand lob2">
       <Link to="/" style={{ textDecoration: "none", color: "white" }}>

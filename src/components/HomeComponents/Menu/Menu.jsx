@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Menu.css"
 import OptionsList from "../OptionsList/OptionsList";
 
-const Menu = ({type, close}) => {
+const Menu = ({type, close, mobile = false}) => {
     const [options,setOptions] = useState([]);
 
     useEffect(()=>{
@@ -15,7 +15,7 @@ const Menu = ({type, close}) => {
         setOptions(response.data)
       }
 
-    return type ==="Cakes" && options.length ?( 
+    return type ==="Cakes" && options.length  && mobile == false?( 
         <div className="menu">
             <div className="item-row">
                 <div className="column">
@@ -32,7 +32,7 @@ const Menu = ({type, close}) => {
             <button onClick={close}>Close</button>
             </div>
         </div>
-    ): options.length ? (
+    ): type === 'Cupcakes' && options.length && mobile == false? (
     <div>
         <div className="flavors">
                 <OptionsList type = {"Cake Flavors"} options = {options}/>
@@ -43,7 +43,34 @@ const Menu = ({type, close}) => {
             <button onClick={close}>Close</button>
             </div>
     </div>
-    ):null
-}
+    ): type ==="Cakes" && options.length ? (
+        <div className="menu-mobile">
+            <div className="item-row">
+                <div className="column-mobile">
+                    <OptionsList type = {"Cake Flavors"} options = {options}/>
+                    <OptionsList type = {"Classic Frostings"} options = {options}/>
+                    <OptionsList type = {"Specialty Fillings"} options = {options}/>
+                    <OptionsList type = {"Specialty Frostings"} options = {options}/>
+                </div>
+            </div>
+            <div className="button-row">
+            <button onClick={close}>Close</button>
+            </div>
+        </div>
+
+
+    ) :  type === 'Cupcakes' && options.length ? (
+        <div>
+        <div className="flavors">
+                <OptionsList type = {"Cake Flavors"} options = {options}/>
+                <OptionsList type = {"Classic Frostings"} options = {options}/>
+                <OptionsList type = {"Specialty Cupcake Flavors"} options = {options}/>
+        </div>
+        <div className="button-row">
+            <button onClick={close}>Close</button>
+            </div>
+    </div>
+    ): null
+} 
  
 export default Menu;

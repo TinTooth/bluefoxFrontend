@@ -14,7 +14,7 @@ const OrderPage = () => {
     const navigate = useNavigate();
 
 
-    return screenSize.width >= 1100  ?(
+    return screenSize.width >= 1100  && screenSize.height >=700 ?(
         <>
         <NavBar></NavBar>
         <div className="b">

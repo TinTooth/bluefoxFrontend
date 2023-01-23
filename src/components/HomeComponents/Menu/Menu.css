@@ -2,15 +2,17 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    width: 80vw;
+    height: 82vh;
 }
 
 .column{
     padding: 2%;
-    width: 20vw;
+    width: 40vw;
 }
 
 .option-list{
-    padding: 2%;
+    /* padding: 2%; */
     margin-bottom: 2vw;
 }
 
@@ -29,6 +31,6 @@
     background-color: steelblue ;
     color: aliceblue;
 
-    font-size: .75vw;
+    font-size: 2vh;
     
 }

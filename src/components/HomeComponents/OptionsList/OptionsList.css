@@ -2,11 +2,15 @@
     border-bottom: 1px solid #C37F90;
     width: 100%;
     margin-bottom: 2%;
-    font-size: 1.1vw;
+    font-size: 2.5vh;
 }
 
 .option {
     padding-left: 5%;
+}
+
+.option-list {
+    color: aliceblue;
 }
 
 .cake-size-container {
@@ -17,6 +21,10 @@
     margin-top: 5%;
     padding-left: 2%;
 
+}
+
+.option-list button {
+    font-size: 2vh;
 }
 
 .size {

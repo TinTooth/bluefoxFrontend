@@ -84,6 +84,7 @@ const HomePage = () => {
     <>
     <NavBar/>
     <SideBar/>
+    <LandingSection cookieRef={cookieRef} cakeRef = {cakeRef} cupcakeRef = {cupcakeRef} goodiesRef = {goodiesRef} mobile = {true}/>
     <ProductSection thisref = {cakeRef} productData = {cakeProducts} images = {cakeImages} mobile = {true}/>
     <ProductSection thisref = {cupcakeRef} productData = {cupcakeProducts} images = {cupcakeImages}  mobile = {true}/>
     <ProductSection thisref = {cookieRef} productData = {cookieProducts} images = {cookieImages} mobile = {true} />

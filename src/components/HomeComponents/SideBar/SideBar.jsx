@@ -50,7 +50,7 @@ const SideBar = () => {
             onClick={()=> window.location.href = 'https://www.instagram.com/blue_fox_bakery/?hl=en'}>
             Instagram</button>
         </div>
-        </>
+    </>
     )
 }
 

@@ -60,3 +60,30 @@
     padding-bottom: .5%;
 }
 
+
+.landing {
+    width: 85vw;
+    height: 90vh;
+    /* background-color: aqua; */
+    margin-left: 15vw;
+    text-align: center;
+    background-color: #2b3547;
+    color: aliceblue;
+    font-size: larger;
+}
+
+.landing-img {
+    width: 100%;
+    height: 65%;
+    
+}
+
+.landing-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.landing-container {
+    background-color: #354157;
+}

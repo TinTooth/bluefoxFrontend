@@ -2,8 +2,9 @@ import "./LandingSection.css"
 
 import React from "react"
 import { useNavigate } from "react-router-dom";
+import fox from "../../../Images/Fox2.jpg"
 
-const LandingSection = ({cookieRef, cakeRef, cupcakeRef, goodiesRef}) => {
+const LandingSection = ({cookieRef, cakeRef, cupcakeRef, goodiesRef, mobile = false}) => {
     const navigate = useNavigate()
     
 
@@ -21,7 +22,7 @@ const LandingSection = ({cookieRef, cakeRef, cupcakeRef, goodiesRef}) => {
         navigate('/order');
     }
 
-    return (
+    return mobile === false ? (
         <div className="section-container">
             <div className="nav-bar">
                 <button onClick = {handleSectionClick} name = 'cakes'>Cakes</button>
@@ -41,7 +42,20 @@ const LandingSection = ({cookieRef, cakeRef, cupcakeRef, goodiesRef}) => {
             </div>
             <div className="footer font1 lob2"> See Lisa's Creations Below</div>
         </div>
-      );
+      ):
+      <><div className="landing-container">
+
+        <div className="landing">
+            <div className="landing-img">
+                <img src={fox} alt="Fox Logo" className="logo" />
+            </div>
+            <div> A Home Bakery in Fox Point Wisconsin</div>
+            <div> Started by Lisa in 2017, she has been sweetening up events since!</div>
+            <div className="footer font1 lob2"> See Lisa's Creations Below</div>
+        </div>
+      </div>
+      </>
+      ;
 }
  
 export default LandingSection;

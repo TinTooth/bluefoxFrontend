@@ -77,6 +77,20 @@
     padding-bottom: 1%;
 }
 
+.section-name {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    font-size: 5vh;
+    text-align: center;
+    border-bottom: 4px solid #C37F90;
+    margin-top: 4%;
+    padding-bottom: 1%;
+}
+
+
 .buttons-container {
     display: flex;
     justify-content: flex-end;

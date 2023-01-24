@@ -18,14 +18,14 @@ const Product = ({product,image}) => {
                 ): " Each"}</div>
         </div>
       ): <div className="product-info">
-      <div className="product-name lob2">{product.name}</div>
+      <div className="product-name-mobile lob2">{product.name}</div>
       <div className="image-container-card">
           <img src={image} alt="product image" />
       </div>
-      <div className="details">
+      <div className="details mobile-font">
           <div className="description-mobile"> {product.description}</div>
       </div>
-          <div className="price">${product.price}{product.type === "Cookies" || product.type === "Cupcakes" ? (
+          <div className="price mobile-font">${product.price}{product.type === "Cookies" || product.type === "Cupcakes" ? (
                       " per Dozen"
           ): " Each"}</div>
   </div> ;

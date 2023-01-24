@@ -110,6 +110,10 @@
 .ptitle {
     padding-left: 5%;
 }
+.ptitle-mobile{
+    padding-left: 5%;
+    font-size: larger;
+}
 
 
 .buttons-container button:hover {

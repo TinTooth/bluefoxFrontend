@@ -51,7 +51,7 @@ const ProductSection = ({thisref, productData ,images, mobile = false}) => {
       <div className="product-section-container-mobile" ref = {thisref}>
             <div className="m-section-mobile">
                 <div className="section-name-mobile lob2"> 
-                    <div className="ptitle">{productData[0].type}</div> 
+                    <div className="ptitle-mobile">{productData[0].type}</div> 
                 </div>
                 <div className="products-container-mobile">
 

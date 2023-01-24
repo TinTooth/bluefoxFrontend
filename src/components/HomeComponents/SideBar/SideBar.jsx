@@ -44,7 +44,7 @@ const SideBar = () => {
                 <img src= {cupcake} id = 'Cupcakes' onClick = {handleCakeMenu} />
             </button>
             <button className = 'sidebar-button'>
-                <img src= {cake} id = 'sizes' onClick = {handleCakeMenu} />
+                <img src= {cake} id = 'Cake Sizes' onClick = {handleCakeMenu} />
             </button>
             <button className = 'sidebar-button' 
             onClick={()=> window.location.href = 'https://www.instagram.com/blue_fox_bakery/?hl=en'}>

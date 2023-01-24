@@ -17,7 +17,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 75%;
+    width: 100%;
     margin-top: 5%;
     padding-left: 2%;
 
@@ -39,7 +39,7 @@
 }
 
 .h {
-    font-size: 1vw;
+    font-size: 2.2vh;
     border-bottom: 1px solid #C37F90;
     margin-bottom: 2%;
 }

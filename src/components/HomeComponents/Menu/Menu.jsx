@@ -53,9 +53,6 @@ const Menu = ({type, close, mobile = false}) => {
                     <OptionsList type = {"Specialty Frostings"} options = {options}/>
                 </div>
             </div>
-            <div className="button-row">
-            <button onClick={close}>Close</button>
-            </div>
         </div>
 
 
@@ -66,17 +63,11 @@ const Menu = ({type, close, mobile = false}) => {
                 <OptionsList type = {"Classic Frostings"} options = {options}/>
                 <OptionsList type = {"Specialty Cupcake Flavors"} options = {options}/>
         </div>
-        <div className="button-row">
-            <button onClick={close}>Close</button>
-            </div>
     </div>
-    ): type === 'sizes' && options.length ? (
+    ): type === 'Cake Sizes' && options.length ? (
         <>
         <div className="flavors">
                 <OptionsList type = {"Cake Size"} options = {options}/>
-        </div>
-        <div className="button-row">
-            <button onClick={close}>Close</button>
         </div>
         </>
     ): null

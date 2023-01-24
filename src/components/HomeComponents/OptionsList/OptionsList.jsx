@@ -9,7 +9,7 @@ const OptionsList = ({type,options}) => {
             })}
         </div>
       ):
-            <div className="cake-size-container">
+            <div className="cake-size-container option-list">
                 <div className="row">
                     <div className="size h">Cake Size</div>
                     <div className="servings h">Serves</div>

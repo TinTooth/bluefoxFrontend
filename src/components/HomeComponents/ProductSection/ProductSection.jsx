@@ -50,7 +50,7 @@ const ProductSection = ({thisref, productData ,images, mobile = false}) => {
       ) : productData.length && mobile == true ? (
       <div className="product-section-container-mobile" ref = {thisref}>
             <div className="m-section-mobile">
-                <div className="section-name lob2"> 
+                <div className="section-name-mobile lob2"> 
                     <div className="ptitle">{productData[0].type}</div> 
                 </div>
                 <div className="products-container-mobile">

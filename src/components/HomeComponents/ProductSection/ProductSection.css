@@ -77,7 +77,7 @@
     padding-bottom: 1%;
 }
 
-.section-name {
+.section-name-mobile {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;

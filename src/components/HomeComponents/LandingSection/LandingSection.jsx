@@ -30,6 +30,8 @@ const LandingSection = ({cookieRef, cakeRef, cupcakeRef, goodiesRef, mobile = fa
                 <button onClick = {handleSectionClick} name = 'cookies'>Cookies</button>
                 <button onClick = {handleSectionClick} name = 'goodies'>Other Goodies</button>
                 <button onClick={()=> window.location.href = 'https://www.instagram.com/blue_fox_bakery/?hl=en'}>Instagram</button>
+                <button onClick={()=> window.location.href = 'https://www.facebook.com/BlueFoxBakeryMke/'}>
+            Facebook</button>
                 <button onClick={handleOrderClick}>Order</button>
             </div>
             <div className="title-container">

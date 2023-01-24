@@ -49,6 +49,9 @@ const SideBar = () => {
             <button className = 'sidebar-button' 
             onClick={()=> window.location.href = 'https://www.instagram.com/blue_fox_bakery/?hl=en'}>
             Instagram</button>
+            <button className = 'sidebar-button' 
+            onClick={()=> window.location.href = 'https://www.facebook.com/BlueFoxBakeryMke/'}>
+            Facebook</button>
         </div>
     </>
     )

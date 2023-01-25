@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import useCheckWidth from "../../hooks/useCheckWidth";
 import "./NavBar.css";
 
-const Navbar = () => {
+const Navbar = ({title = ''}) => {
   const screenSize = useCheckWidth()
   const navigate = useNavigate();
 
@@ -34,10 +34,7 @@ const Navbar = () => {
       </Link>
     </li>
     <li>
-    {screenSize.width >= 1000 ? ( 
-      <button  className = "lob2" onClick={()=> window.location.href = 'https://www.instagram.com/blue_fox_bakery/?hl=en'}>Instagram</button>
-    ):null}
-    
+    <div>{title}</div>    
     </li>
   </ul>
 </div>

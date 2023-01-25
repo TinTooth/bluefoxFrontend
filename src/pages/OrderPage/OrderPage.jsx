@@ -29,7 +29,7 @@ const OrderPage = () => {
         
     ) :
     <>
-        <NavBar></NavBar>
+        <NavBar title = 'Order'></NavBar>
         <SideBar></SideBar>
         <OrderForm></OrderForm>
     </>

@@ -204,7 +204,7 @@ const OrderForm = ({setItems, items}) => {
                  </Modal>
         </div>
      ) : 
-     <div>Mobile Order Form
+     <div>
         <div className="orderpage-container">
             <div className="product-container-mobile">
                 <ProductList addItem={addItem} productName ={"Cakes"} products = {products}></ProductList>

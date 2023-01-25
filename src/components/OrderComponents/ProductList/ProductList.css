@@ -4,6 +4,13 @@
     flex-wrap: wrap;
     flex-direction: column;
 }
+.product-list-container-mobile {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: aliceblue;
+}
 
 .product-row {
     width: 100%;
@@ -12,6 +19,19 @@
     align-items: center;
     margin-bottom: 3%;
     font-size: 1vw;
+}
+.product-row-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3%;
+    font-size: 2vh;
+}
+
+.product-row-mobile button {
+    font-size: 2vh;
+    margin-right: 3%;
 }
 
 .product-heading {

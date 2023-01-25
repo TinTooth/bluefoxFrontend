@@ -10,6 +10,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     color: aliceblue;
+    /* background-color: #3C4F6D;    */
 }
 
 .product-row {

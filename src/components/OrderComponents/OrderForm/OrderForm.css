@@ -154,5 +154,36 @@
 }
 
 .orderpage-container {
-    margin-left: 15vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: #354157;
+    
+
 }
+
+.order-sidebar {
+    width: 15vw;
+    max-width: 125px;
+    height: 90vh;
+    left:0;
+    position: fixed;
+    margin-right: 4vw;
+}
+
+
+.product-container-mobile {
+    width: 85vw;
+    margin-left: 15vw;
+    background-color: #2b3547;
+    
+}
+
+/* .sidebar-button {
+    aspect-ratio: 1/1;
+    width: 100%;
+    font-size: large;
+    text-overflow: wrap;
+    background-color: #354157;
+
+} */

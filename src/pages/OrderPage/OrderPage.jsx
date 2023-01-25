@@ -30,8 +30,7 @@ const OrderPage = () => {
     ) :
     <>
         <NavBar title = 'Order'></NavBar>
-        <SideBar></SideBar>
-        <OrderForm></OrderForm>
+        <OrderForm setItems={setitems}  items = {items}></OrderForm>
     </>
 
 }

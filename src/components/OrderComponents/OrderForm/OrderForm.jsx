@@ -24,6 +24,8 @@ const OrderForm = ({setItems, items}) => {
     const [getPrice, getWorkTime] = useCalc();
     const [warningModal, setwarningModal] = useState(false);
     const [warningMessage, setwarningMessage] = useState("");
+    const [itemListModal, setitemListModal] = useState(false);
+    const [infoModal, setinfoModal] = useState(false);
     let order = {
         customer_name:' ',
         customer_phone_number:'xxx - xxx - xxxxx ',
@@ -108,6 +110,7 @@ const OrderForm = ({setItems, items}) => {
         
         if (message == ""){
             postOrder();
+            if( infoModal === true){setinfoModal(false)};
             setitemConfirmModal(true);
         }
         else {
@@ -145,6 +148,13 @@ const OrderForm = ({setItems, items}) => {
         setitemConfirmModal(false);
         setorderConfirmModal(false);
        
+    }
+
+    const handleItemList = () => {
+        itemListModal ? (setitemListModal(false)):setitemListModal(true);
+    }
+    const handleInfoModal = () => {
+        infoModal ? (setinfoModal(false)):setinfoModal(true);
     }
 
     const closeConfirmWindow = () => {
@@ -200,12 +210,58 @@ const OrderForm = ({setItems, items}) => {
                  <div className="message-row">
                  <button onClick = {()=>setwarningModal(false)}>Close</button>
                  </div>
-                 
-                 </Modal>
+            </Modal>
         </div>
      ) : 
-     <div>
+     <>
+        <Modal title = "" modal = {itemConfirmModal} onClose = {handleModal} mobile ={true}>
+                <div className="item-confirm">
+                    <div className="message">Please Confirm Items Below</div>
+                    <ItemList items = {items} setItems = {setItems}></ItemList>
+                    <div className="button-row ">
+                        <button className = "modal-button" onClick = {handleModal}>CANCEL</button>
+                        <button className = "modal-button" onClick = {createItems}>Confirm Order</button> 
+                    </div>
+                </div>
+            </Modal>
+        <Modal title = 'Order Items' modal = {itemListModal} mobile = {true} onClose = {handleItemList}>
+            <ItemList items = {items} setItems = {setItems}></ItemList>
+        </Modal>
+        <Modal title = "" modal = {infoModal} onClose = {handleInfoModal} mobile = {true}>
+        <div className="input2">
+
+                        <Input title ="Name:" name ="customer_name" value = {formData.customer_name} onChange = {handleInputChange}/>
+                    </div>
+                    <div className="input2">
+                        <Input title ="Email:" name ="customer_email" value = {formData.customer_email} onChange = {handleInputChange}/>
+                    </div>
+                    <div className="input2">
+                        <Input title ="Phone #:" name ="customer_phone_number" value = {formData.customer_phone_number} onChange = {handleInputChange}/>
+                    </div>
+                    <div className="date input2">
+                        <Input type = "date" title = "OrderDate:" name= "deliver_date" value = {formData.deliver_date} onChange={handleInputChange}/>
+                    </div>
+                    <div className="column-form1">
+                    <Input title = "Order Notes:" name ="notes" value = {formData.notes} onChange ={handleInputChange} textArea = {true} />
+                    </div>
+                <div className="notes">Write general notes about the order here or anything else you would like to tell her. Who is this for? What kind of Event? 
+                </div>
+                    <button onClick ={handleInfoModal}>Cancel</button>   
+                    <button onClick ={handleSubmit}>Submit Order Request</button>          
+        </Modal>
+        <Modal title = "Invalid Order" modal = {warningModal} onClose ={()=> setwarningModal(false)}>
+                 
+                 <div className="message">{warningMessage}</div> 
+                 <div className="message-row">
+                 </div>
+            </Modal>
+            <Modal title = "Order Recieved!" modal = {orderConfirmModal} onClose ={closeConfirmWindow} mobile = {true}> <OrderConfirmation items = {items} order = {currentOrder} close = {closeConfirmWindow}/></Modal>
+        
         <div className="orderpage-container">
+             <div className="order-sidebar">
+                <button className="sidebar-button" onClick = {handleItemList}> Cart</button>
+                <button className="sidebar-button" onClick = {handleInfoModal}> Confirm</button>
+            </div>
             <div className="product-container-mobile">
                 <ProductList addItem={addItem} productName ={"Cakes"} products = {products}></ProductList>
                 <ProductList addItem={addItem} productName ={"Cupcakes"} products = {products}></ProductList>
@@ -213,7 +269,8 @@ const OrderForm = ({setItems, items}) => {
                 <ProductList addItem={addItem} productName = {"Goodies"} products = {products}></ProductList>
             </div>
         </div>
-     </div>
+
+     </>
      
      ;
 }

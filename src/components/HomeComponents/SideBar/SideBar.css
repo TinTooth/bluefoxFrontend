@@ -1,9 +1,11 @@
 .sidebar {
     width: 15vw;
+    max-width: 125px;
     height: 90vh;
     left:0;
     position: fixed;
     margin-right: 4vw;
+
     /* margin-top: 20%; */
 }
 
@@ -13,6 +15,7 @@
     font-size: large;
     text-overflow: wrap;
     background-color: #354157;
+
 }
 
 .sidebar-button img {

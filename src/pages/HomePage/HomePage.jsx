@@ -80,7 +80,7 @@ const HomePage = () => {
         <ProductSection thisref = {goodiesRef} productData = {goodieProducts} images = {goodieImages} />
         <Footer/>
     </>
-    ) : 
+    ) : screenSize.height > 450 ?( 
     <>
     <NavBar/>
     <SideBar/>
@@ -89,6 +89,12 @@ const HomePage = () => {
     <ProductSection thisref = {cupcakeRef} productData = {cupcakeProducts} images = {cupcakeImages}  mobile = {true}/>
     <ProductSection thisref = {cookieRef} productData = {cookieProducts} images = {cookieImages} mobile = {true} />
     <ProductSection thisref = {goodiesRef} productData = {goodieProducts} images = {goodieImages}  mobile = {true}/>
+    </>
+    ):
+    <>
+      <div> Please Rotate your device</div>
+      <div> height {screenSize.height} </div>
+      <div> width {screenSize.width} </div>
     </>
 };
 

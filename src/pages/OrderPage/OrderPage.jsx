@@ -5,6 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 import ItemList from "../../components/OrderComponents/ItemsList/ItemList.jsx";
 import OrderForm from "../../components/OrderComponents/OrderForm/OrderForm.jsx";
 import "./OrderPage.css"
+import SideBar from "../../components/HomeComponents/SideBar/SideBar.jsx";
 
 
 
@@ -21,13 +22,17 @@ const OrderPage = () => {
             <OrderForm setItems={setitems}  items = {items}/>
             <div className="item-list-container">
             <div className="spacer"></div>
-            <ItemList items = {items} setItems = {setitems}></ItemList>
+             <ItemList items = {items} setItems = {setitems}></ItemList>
             </div>
         </div>
         </>  
         
     ) :
-    <div>{screenSize.width}/{screenSize.height}</div>;
+    <>
+        <NavBar></NavBar>
+        <SideBar></SideBar>
+        <OrderForm></OrderForm>
+    </>
 
 }
  

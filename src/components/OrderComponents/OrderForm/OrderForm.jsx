@@ -8,11 +8,13 @@ import Modal from "../../Util/Modal/Modal";
 import useConfig from "../../../hooks/useConfig";
 import ItemList from "../ItemsList/ItemList";
 import useCalc from "../../../hooks/useCalc"
+import useCheckWidth from "../../../hooks/useCheckWidth";
 import OrderConfirmation from "../OrderConfirmation/OrderConfirmation";
-import useAuth from "../../../hooks/useAuth";
+
 
 
 const OrderForm = ({setItems, items}) => {
+    const screenSize = useCheckWidth();
     const [products,setProducts] = useState([]);
     const [currentOrder,setcurrentOrder] = useState([]);
     const [options,setOptions] = useState([]);
@@ -152,7 +154,7 @@ const OrderForm = ({setItems, items}) => {
 
     const [formData, handleInputChange,handleSubmit] = useCustomForm(order,createOrder)
 
-    return ( 
+    return screenSize.width >= 1100 ? ( 
         <div className="form-container">
             <div className="products-row">
                 <ProductList addItem={addItem} productName ={"Cakes"} products = {products}></ProductList>
@@ -201,7 +203,19 @@ const OrderForm = ({setItems, items}) => {
                  
                  </Modal>
         </div>
-     );
+     ) : 
+     <div>Mobile Order Form
+        <div className="orderpage-container">
+            <div className="product-container-mobile">
+                <ProductList addItem={addItem} productName ={"Cakes"} products = {products}></ProductList>
+                <ProductList addItem={addItem} productName ={"Cupcakes"} products = {products}></ProductList>
+                <ProductList addItem={addItem} productName = {"Cookies"} products = {products}> </ProductList>
+                <ProductList addItem={addItem} productName = {"Goodies"} products = {products}></ProductList>
+            </div>
+        </div>
+     </div>
+     
+     ;
 }
 
 export default OrderForm;

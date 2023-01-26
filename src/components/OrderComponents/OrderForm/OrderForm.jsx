@@ -255,7 +255,7 @@ const OrderForm = ({setItems, items}) => {
                  <div className="message-row">
                  </div>
             </Modal>
-            <Modal title = "Order Recieved!" modal = {orderConfirmModal} onClose ={closeConfirmWindow} mobile = {true}> <OrderConfirmation items = {items} order = {currentOrder} close = {closeConfirmWindow}/></Modal>
+            <Modal title = "Order Recieved!" modal = {orderConfirmModal} onClose ={closeConfirmWindow} mobile = {true}> <OrderConfirmation items = {items} order = {currentOrder} close = {closeConfirmWindow} mobile = {true}/></Modal>
         
         <div className="orderpage-container">
              <div className="order-sidebar">

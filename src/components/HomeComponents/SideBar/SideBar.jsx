@@ -49,11 +49,11 @@ const SideBar = () => {
             <button className = 'sidebar-button'>
                 <img src= {size} id = 'Cake Sizes' onClick = {handleCakeMenu} />
             </button>
-            <button className = 'sidebar-button' >
-                <img src={fb} alt="fb icon" onClick={()=> window.location.href = 'https://www.instagram.com/blue_fox_bakery/?hl=en'}/>
-            </button>
             <button className = 'sidebar-button'>
-                <img src={insta} alt="insta icon"  onClick={()=> window.location.href = 'https://www.facebook.com/BlueFoxBakeryMke/'}/></button>
+                <img src={fb} alt="insta icon"  onClick={()=> window.location.href = 'https://www.facebook.com/BlueFoxBakeryMke/'}/></button>
+            <button className = 'sidebar-button' >
+                <img src={insta} alt="fb icon" onClick={()=> window.location.href = 'https://www.instagram.com/blue_fox_bakery/?hl=en'}/>
+            </button>
         </div>
     </>
     )

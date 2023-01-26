@@ -196,7 +196,7 @@ const OrderForm = ({setItems, items}) => {
             <Modal title = "" modal = {itemConfirmModal} onClose = {handleModal}>
                 <div className="item-confirm">
                     <div className="message">Please Confirm Items Below</div>
-                    <ItemList items = {items} setItems = {setItems}></ItemList>
+                    <ItemList items = {items} setItems = {setItems} ></ItemList>
                     <div className="button-row ">
                         <button className = "modal-button" onClick = {handleModal}>CANCEL</button>
                         <button className = "modal-button" onClick = {createItems}>Confirm Order</button> 
@@ -225,7 +225,7 @@ const OrderForm = ({setItems, items}) => {
                 </div>
             </Modal>
         <Modal title = 'Order Items' modal = {itemListModal} mobile = {true} onClose = {handleItemList}>
-            <ItemList items = {items} setItems = {setItems}></ItemList>
+            <ItemList items = {items} setItems = {setItems} mobile = {true}></ItemList>
         </Modal>
         <Modal title = "" modal = {infoModal} onClose = {handleInfoModal} mobile = {true}>
         <div className="input2">

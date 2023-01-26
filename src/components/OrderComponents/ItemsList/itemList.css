@@ -10,6 +10,18 @@
     flex-wrap: wrap;
     flex-direction: column;
 }
+.item-list-mobile {
+    background-color: #2b3547;
+    width: 100vw;
+    min-height: 100vh;
+    max-height: 80vh;
+    text-align: center;
+    margin-top: auto;
+    border: 6px solid #818181;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 
 .heading {
     padding: .2vw;
